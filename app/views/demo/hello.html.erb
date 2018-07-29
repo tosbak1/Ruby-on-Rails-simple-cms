@@ -1,0 +1,27 @@
+<h2>This is inside hello html</h2>
+<%= 1 + 1%>
+<% target = "world"%><br>
+
+<%= "Hello #{target}"%>
+
+<br>
+<%=
+3.times do |x|
+  puts x
+end
+%>
+
+<h3>The best way to do the above code:</h3>
+
+<% @array.each do |x|%>
+  <%= "#{x} #{@name}"%> <br>
+<%end%>
+
+<%= link_to('Take me back to index page', {:action => 'index'})%>
+<br>
+ID: <%= @id %> <br>
+ID: <%= params[:id]%> <br>
+Page: <%= @page%> <br>
+Name: <%= @second_name%><br>
+All Values in param are strings so need to change it to int or whatever value you want<br>
+Next Page: <%= @page.to_i + 1%>
