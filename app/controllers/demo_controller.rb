@@ -20,7 +20,6 @@ class DemoController < ApplicationController
     #Can use symble and string for the params argument as below
     @id = params['id']
     @page = params[:page]
-    @second_name = @name
     #render('index')
   end
 
