@@ -2,7 +2,8 @@
 class DemoController < ApplicationController
   #Method called index which is an action. Action we are asking the controller to perform.
   #It renders a view and also renders a default view layout
-  layout false
+  #layout false
+  #default layout is application
 
   attr_accessor :name
   #Good practice to have action defined for each template
@@ -35,4 +36,6 @@ class DemoController < ApplicationController
     redirect_to('https://www.instagram.com')
   end
 
+  def escaped_output
+  end
 end
