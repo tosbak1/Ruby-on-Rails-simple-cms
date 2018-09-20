@@ -12,6 +12,7 @@ class DemoController < ApplicationController
     #so index action gets called and the template gets set to 'hello' and gets rendered after that
     #render('hello')
     #render is mostly used with if else statements.
+    @subject = Subject.find(1)
   end
 
   def hello

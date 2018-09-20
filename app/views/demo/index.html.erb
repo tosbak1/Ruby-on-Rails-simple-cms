@@ -7,3 +7,14 @@
 <%= link_to('Link to Hello page with parameters', {:action => 'hello', :page => 5, :id => 20, :name => 'toyin'})%>
 <br>
 <%= link_to('Roar', "#", :onclick => "jsRoar('JavaSCript'); return true;" )%>
+<%= form_for(@subject), :html => {:multipart => true} do |f| %>
+  <%= f.label(:name) %>
+  <%= f.text_field(:name, :size=> 40, :maxlength => 40) %>
+  <%= f.password_field(:password, :size => 40) %>
+  <%#= f.hidden_field(:position, 'abcdef0123456789') %>
+  <%= f.text_area(:position, :size => "40x5") %>
+  <%= f.radio_button(:visible, "text") %>
+  <%= f.radio_button(:visible, "HTML") %>
+  <%= f.check_box(:visible) #requires :multipart => true%>
+  <%#= f.file_field(:logo) %>
+<% end %>
